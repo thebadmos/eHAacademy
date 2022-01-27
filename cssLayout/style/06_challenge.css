@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+}
+
+header{
+    text-align: center;
+    margin-top: 1em;
+    font-family: monospace;
+    color: burlywood;
+    font-size: 30px;
+}
+#firstDiv,#secondDiv{
+    width: 500px;
+    border: 15px solid burlywood;
+    padding: 50px;
+    margin: 20px;
+}
+.container{
+    font-family: monospace;
+}
+#secondDiv{
+    float: right;
+    border: 15px solid rgb(209, 150, 73);
+   
+      
+}
