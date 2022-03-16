@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge: Catwalk</title>
+    <style>
+        #cat {
+            position: absolute;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img id="cat" src="https://www.kasandbox.org/programming-images/misc/cat-walk.gif">
+</div>
+
+<script>
+var catEl = document.getElementById("cat");
+
+var startTime = new Date().getTime();
+var walkTheCat = function() {
+  var currTime = new Date().getTime();
+  var secondsElapsed = ((currTime - startTime)/1000)
+var newLeft = secondsElapsed * 30 ;
+      catEl.style.left = newLeft + "px";
+      
+      //only run if the position is less than than the browser's window width
+      if (newLeft < window.innerWidth){
+         window.requestAnimationFrame(walkTheCat);
+         }
+      }
+ walkTheCat();
+ </script>
+ </body>
+</html>
